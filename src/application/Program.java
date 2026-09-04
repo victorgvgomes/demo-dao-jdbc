@@ -16,6 +16,7 @@ public class Program {
 		System.out.println("=== TEST 1: seller findById ====");
 		
 		Seller seller = sellerDao.findbyId(3);
+		
 		System.out.println(seller);
 		
 	
@@ -26,6 +27,15 @@ public class Program {
 		for(Seller obj: list) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("\n=== TEST 3: seller findAll ====");
+		list = sellerDao.findAll();
+		for (Seller obj: list) {
+			System.out.println(obj);
+			System.out.println(list.size());
+		}
+		
+		
 	}
 
 }
